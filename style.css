@@ -1,0 +1,20 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#container > .row-container > div {
+  width: calc(6.25vw - 2px);
+  height: calc(6.25vh - 2px);
+  border: 1px solid black;
+}
