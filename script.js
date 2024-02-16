@@ -47,9 +47,6 @@ const setStyle = (size) => {
     el.addEventListener("mouseenter", () => {
       el.style["background-color"] = "red";
     });
-    el.addEventListener("click", () => {
-      el.style["background-color"] = "white";
-    });
     clearButton.addEventListener("click", () => {
       el.style["background-color"] = "white";
     });
