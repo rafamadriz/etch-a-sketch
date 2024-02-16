@@ -26,7 +26,6 @@ const GenerateRandBlue = () => {
     );
   }
 };
-GenerateRandBlue();
 
 const computeCellSize = (size) => {
   const inputWidth = document.getElementById("input-container").clientWidth;
@@ -56,6 +55,7 @@ const setStyle = (size) => {
     "#grid-container > .row-container > div ",
   );
 
+  GenerateRandBlue();
   const clearButton = document.getElementById("clearGrid");
   const cellWidth = computeCellSize(size)[0];
   const cellHeight = computeCellSize(size)[1];
@@ -68,18 +68,6 @@ const setStyle = (size) => {
       el.style["background-color"] = arrBlues[RandNumber(0, 31)];
     });
     clearButton.addEventListener("click", () => {
-      el.style["background-color"] = "white";
-    });
-  });
-};
-
-const clearButton = () => {
-  document.getElementById("clearButton").addEventListener("click", () => {
-    const div = document.querySelectorAll(
-      "#grid-container > .row-container > div ",
-    );
-
-    div.forEach((el) => {
       el.style["background-color"] = "white";
     });
   });
@@ -99,6 +87,10 @@ const createGrid = (size) => {
   }
   setStyle(size);
 };
+
+document.getElementById("input").addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevent form submission
+});
 
 createGrid(16);
 const button = document.getElementById("saveButton");
