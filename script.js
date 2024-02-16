@@ -8,6 +8,26 @@ const checkNumber = (n) => {
   return n;
 };
 
+const RandNumber = (min, max) => {
+  const M = Math;
+  min = M.ceil(min);
+  max = M.floor(max);
+  return M.floor(M.random() * (max - min)) + min;
+};
+
+let arrBlues = [];
+const GenerateRandBlue = () => {
+  for (let i = 0; i < 30; i++) {
+    arrBlues.push(
+      `rgb(${RandNumber(0, 81)}, ${RandNumber(100, 151)}, ${RandNumber(
+        90,
+        256,
+      )})`,
+    );
+  }
+};
+GenerateRandBlue();
+
 const computeCellSize = (size) => {
   const inputWidth = document.getElementById("input-container").clientWidth;
   const inputHeight = document.getElementById("input-container").clientHeight;
@@ -45,7 +65,7 @@ const setStyle = (size) => {
     el.style.width = `${cellWidth}vw`;
     el.style.height = `${cellHeight}vh`;
     el.addEventListener("mouseenter", () => {
-      el.style["background-color"] = "red";
+      el.style["background-color"] = arrBlues[RandNumber(0, 31)];
     });
     clearButton.addEventListener("click", () => {
       el.style["background-color"] = "white";
