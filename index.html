@@ -8,7 +8,24 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <div id="container"></div>
+    <div id="container">
+      <div id="input-container">
+        <form id="input">
+          <input
+            type="number"
+            min="16"
+            max="100"
+            placeholder="16"
+            id="inputField"
+            name="userInput"
+          />
+          <button type="button" id="saveButton">Save</button>
+          <button type="button" id="clearGrid">Clear</button>
+        </form>
+      </div>
+
+      <div id="grid-container"></div>
+    </div>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
