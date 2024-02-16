@@ -5,6 +5,55 @@ html {
   border: 0;
 }
 
+#inputField {
+  padding: 5px;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  width: 60px;
+  margin: 5px;
+}
+
+#inputField:hover,
+#inputField:focus {
+  border-color: #007bff;
+}
+
+#inputField:invalid {
+  border-color: #dc3545;
+}
+
+#input > button {
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    color 0.3s,
+    border-color 0.3s;
+}
+
+#input > #clearGrid {
+  border: 1px solid #dc3545;
+  color: #dc3545;
+}
+
+#input > #clearGrid:hover {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+#input > #saveButton {
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+
+#input > #saveButton:hover {
+  color: #fff;
+  background-color: #007bff;
+}
+
 #container {
   width: 100%;
   height: 100%;
